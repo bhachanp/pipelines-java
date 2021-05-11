@@ -20,3 +20,11 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: LeanIX-Microservice-Intelligence@0
+  inputs:
+    apitoken: 'abcdefgh'
+    host: 'test.com'
+    manifestpath: '/lx-manifest.yml'
+    stage: 'production'
+    version: '1.1'
+    dependencymanager: 'maven'
